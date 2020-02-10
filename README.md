@@ -13,3 +13,6 @@ git merge Your-Branch-Name
 git push origin master
 *Switch back to your Branch*
 git checkout Your-Branch-Name
+git merge master
+
+then back to Top
