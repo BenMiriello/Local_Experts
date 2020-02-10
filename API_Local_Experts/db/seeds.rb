@@ -59,7 +59,7 @@ end
             name: "See It All in a Day",
             quota: 15,
             category: culture,
-            image: "https://lh3.googleusercontent.com/proxy/vWLJq-5vjphKhhp0ahP5NHayjbyeYbv-9HyWrSWBIeONN7vUEuHrUBTpvSladDbyR5kcLjQCFapbGblRfA3J6UQ3vFaTQRoOevwRr77Jg-pP3wc9izPY6P-BNJfEeGZcPHuAwpIPPJdLPl9ijcw",
+            image: "https://freetoursbyfoot.com/wp-content/uploads/2012/12/Central-Park5.jpg",
             alt: "Picture of New York Skyline"
         },
         {
@@ -350,7 +350,7 @@ end
 # CREATE USERS
 
 puts "Creating users..."
-10.times do
+50.times do
     User.create(name: Faker::Name.name, password: "123")
 end
 
@@ -360,7 +360,7 @@ end
 
 puts "Creating favorites..."
 User.all.each do |user|
-    8.times do
+    10.times do
         Favorite.create(user_id: user.id, experience_id: Experience.all.sample.id)
     end
 end
@@ -382,8 +382,10 @@ end
 
     User.all.each do |user|
         faves = user.favorites.count
-        create_save(user, faves, (user.favorites[rand 0..((faves / 2) - 1)].experience.events.sample))
-        create_save(user, faves, (user.favorites[rand (faves / 2)..(faves - 1)].experience.events.sample))
+        create_save(user, faves, (user.favorites[rand 0..((faves / 3) - 1)].experience.events.sample))
+        create_save(user, faves, (user.favorites[rand (faves / 3)..(faves - (faves / 3) - 1)].experience.events.sample))
+        create_save(user, faves, (user.favorites[rand (faves - (faves / 3) - 1)..(faves - 1)].experience.events.sample))
+        user.saves.sample.book
         user.saves.sample.book
         # byebug
     end

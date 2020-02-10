@@ -6,6 +6,11 @@ export default class MenuBar extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
+  handleSignUp = () => {
+    
+  }
+  
+
   render() {
     const { activeItem } = this.state
 

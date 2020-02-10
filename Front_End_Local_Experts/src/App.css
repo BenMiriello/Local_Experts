@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.cards-container {
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-card {
+  /* grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3; */
+  min-width: 20%;
+  max-width: 40%;
+  height: 400px
+}
+
+.card-extra-div-left {
+  width: 60%; float:left
+}
+
+.card-extra-div-right {
+  width: 20%; float:right;
+  padding: 8px 0;
+}
