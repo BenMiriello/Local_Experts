@@ -1,21 +1,33 @@
 import React from 'react'
-import { Card, Icon } from 'semantic-ui-react'
+import { Card, Icon, Label } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
+
 
 const extra = (
   <a>
-    <Icon name='user' />
-    16 Friends
+    <Button >
+      <Icon 
+        name='favorite'
+        color="yellow"
+      />
+      </Button>
   </a>
 )
 
-const ExperienceCards = () => (
-  <Card
-    image='/images/avatar/large/elliot.jpg'
-    header='Elliot Baker'
-    meta='Friend'
-    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+const ExperienceCards = ({experience}) => {
+  const {image, name , description, category} = experience
+  console.log(experience);
+  return (
+
+    <Card
+    image={image}
+    header={name}
+    meta={category}
+    description={description.substring(0,70) + "..."}
     extra={extra}
-  />
-)
+    />
+  )
+}
 
 export default ExperienceCards
+
