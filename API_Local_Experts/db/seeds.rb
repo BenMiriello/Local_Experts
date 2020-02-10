@@ -59,110 +59,128 @@ end
             name: "See It All in a Day",
             quota: 15,
             category: culture,
-            image: "https://lh3.googleusercontent.com/proxy/vWLJq-5vjphKhhp0ahP5NHayjbyeYbv-9HyWrSWBIeONN7vUEuHrUBTpvSladDbyR5kcLjQCFapbGblRfA3J6UQ3vFaTQRoOevwRr77Jg-pP3wc9izPY6P-BNJfEeGZcPHuAwpIPPJdLPl9ijcw"
+            image: "https://lh3.googleusercontent.com/proxy/vWLJq-5vjphKhhp0ahP5NHayjbyeYbv-9HyWrSWBIeONN7vUEuHrUBTpvSladDbyR5kcLjQCFapbGblRfA3J6UQ3vFaTQRoOevwRr77Jg-pP3wc9izPY6P-BNJfEeGZcPHuAwpIPPJdLPl9ijcw",
+            alt: "Picture of New York Skyline"
         },
         {
             name: "Highlights Bike Tour",
             quota: 16,
             category: outdoors,
-            image: "https://patch.com/img/cdn20/users/22965231/20190503/104754/styles/patch_image/public/2019-td-fiveborobiketour-credit-kenji-edmonds-20190503104705-01547300.jpg?width=725"
+            image: "https://patch.com/img/cdn20/users/22965231/20190503/104754/styles/patch_image/public/2019-td-fiveborobiketour-credit-kenji-edmonds-20190503104705-01547300.jpg?width=725",
+            alt: "Bikers on the Road"
         },
         {
             name: "Italian Home Cooking Class & Dinner",
             quota: 8,
             category: food,
-            image: "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_galleries/142146/2000x2000-0-70-cb8f184feaa4189879595e79cb1e521b.jpg"
+            image: "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_galleries/142146/2000x2000-0-70-cb8f184feaa4189879595e79cb1e521b.jpg",
+            alt: ""
         },
         {
             name: "NYC Bar Crawl",
             quota: 12,
             category: nightlife,
-            image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b3/ab/52.jpg"
+            image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/b3/ab/52.jpg",
+            alt: ""
         },
         {
             name: "History Walk",
             quota: 15,
             category: history,
-            image: "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_galleries/142146/2000x2000-0-70-cb8f184feaa4189879595e79cb1e521b.jpg"
+            image: "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_galleries/142146/2000x2000-0-70-cb8f184feaa4189879595e79cb1e521b.jpg",
+            alt: ""
         },
         {
             name: "Urban Spelunking",
             quota: 8,
             category: outdoors,
             image: "https://upload.wikimedia.org/wikipedia/commons/8/82/Urban_Explorer_in_the_entrance_of_technical_gallery.jpg",
+            alt: "",
             description: "See the hidden side of Manhattan underneath everything else. Battle rat kings and mingle with mole people. \n\"It's not safe. Don't do it.\" -Jo from Milwaukee "
         },
         {
             name: "Paint & Sip Art Class",
             quota: 25,
             category: culture,
-            image: "https://www.burlingtonpaintandsip.com/wp-content/uploads/2018/03/paint-sip-home-hero.jpg"
+            image: "https://www.burlingtonpaintandsip.com/wp-content/uploads/2018/03/paint-sip-home-hero.jpg",
+            alt: ""
         },
         {
             name: "NYC Rooftop Lounge Tour",
             quota: 15,
             category: nightlife,
-            image: "https://cdn.shopify.com/s/files/1/1003/1940/products/terrazas-panoramicas-nueva-york-1_20197a26-03c4-4038-b960-45f8cbb2c40a.jpg?v=1560984871"
+            image: "https://cdn.shopify.com/s/files/1/1003/1940/products/terrazas-panoramicas-nueva-york-1_20197a26-03c4-4038-b960-45f8cbb2c40a.jpg?v=1560984871",
+            alt: ""
         },
         {
             name: "Hip Hop History Tour",
             quota: 15,
             category: culture,
-            image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Hush-Hip-Hop-Tour-975x650.jpg"
+            image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Hush-Hip-Hop-Tour-975x650.jpg",
+            alt: ""
         },
         {
             name: "Photoshoots in Famous NYC Locations",
             quota: 5,
             category: culture,
-            image: "http://weekendwishing.com/wp-content/uploads/2017/06/BrooklynBridge-0953.jpg"
+            image: "http://weekendwishing.com/wp-content/uploads/2017/06/BrooklynBridge-0953.jpg",
+            alt: ""
         },
         {
             name: "Hidden Food Gems",
             quota: 8,
             category: food,
-            image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Visit-Hasidim.jpg"
+            image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Visit-Hasidim.jpg",
+            alt: ""
         },
         {
             name: "The Hidden History of Manhattan",
             quota: 12,
             category: history,
-            image: "https://si.wsj.net/public/resources/images/BN-VJ617_NYMETR_M_20171002122039.jpg"
+            image: "https://si.wsj.net/public/resources/images/BN-VJ617_NYMETR_M_20171002122039.jpg",
+            alt: ""
         },
         {
             name: "Central Park Bike Tour",
             quota: 15,
             category: outdoors,
-            image: "https://img.grouponcdn.com/deal/24ecaU1pYoJsBVYQaScLqj17MmhS/24-1500x900/v1/c700x420.jpg"
+            image: "https://img.grouponcdn.com/deal/24ecaU1pYoJsBVYQaScLqj17MmhS/24-1500x900/v1/c700x420.jpg",
+            alt: ""
         },
         {
             name: "Oldest Bars in NYC Pub Crawl",
             quota: 12,
             category: nightlife,
-            image: "https://lh3.googleusercontent.com/p/AF1QipOw_R8NojZ7YCM0Vwcmyq4pugUDWRmwqyVDOla3=s1600-w1600"
+            image: "https://lh3.googleusercontent.com/p/AF1QipOw_R8NojZ7YCM0Vwcmyq4pugUDWRmwqyVDOla3=s1600-w1600",
+            alt: ""
         },
         {
             name: "Folk Revival Greenwich Village History Tour",
             quota: 12,
             category: history,
-            image: "https://cdn-image.departures.com/sites/default/files/styles/responsive_900x600/public/1533849218/greenwich-village-architecture-new-york-WVILLAGEBOOKTOUR0818.jpg?itok=jlq2GRbt"
+            image: "https://cdn-image.departures.com/sites/default/files/styles/responsive_900x600/public/1533849218/greenwich-village-architecture-new-york-WVILLAGEBOOKTOUR0818.jpg?itok=jlq2GRbt",
+            alt: ""
         },
         {
             name: "How to Bang Cowbells Like a Local with Jim Cramer",
             quota: 15,
             category: culture,
-            image: "https://imgflip.com/s/meme/Mad-Money-Jim-Cramer.jpg"
+            image: "https://imgflip.com/s/meme/Mad-Money-Jim-Cramer.jpg",
+            alt: ""
         },
         {
             name: "Pizza Tour NYC",
             quota: 12,
             category: food,
-            image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Scotts-Pizza-Tour-975x650.jpg"
+            image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Scotts-Pizza-Tour-975x650.jpg",
+            alt: ""
         },
         {
             name: "Hamilton and Revolutionary New York History Tour",
             quota: 12,
             category: history,
             image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Young-Scrappy-and-Hungry-975x650.jpg",
+            alt: "",
             description: "Whether you’re a fan of revolutionary history, musical theatre, or both, the Young, Scrappy and Hungry: Hamilton and Revolutionary New York Tour promises to educate and inspire. New York City played a key role in the Revolutionary War and the birth of the United States. The tour weaves through the politics and history of Colonial America and illuminates one of its most important figures and Founding Father, Alexander Hamilton."
         },
         {
@@ -170,6 +188,7 @@ end
             quota: 20,
             category: culture,
             image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Kenny-Kramer-Reality-Tour-975x650.jpg",
+            alt: "",
             description: "None other than the real Kenny Kramer himself leads the most uniquely authentic Seinfeld tour in town. The Kenny Kramer Reality Tour is a theatrical multi-media tour that delves into the story behind the show, as well the history of Kramer himself. The bus tour winds its way through the city, visiting all the sites made famous in the most popular sitcom of the 1990s, including Monk’s Restaurant, and the Soup Shop.",
             host_name: "Kenny Kramer"
         },
@@ -178,6 +197,7 @@ end
             quota: 14,
             category: culture,
             image: "https://www.fodors.com/wp-content/uploads/2018/09/Unique-NYC-Tours-Sex-and-the-City-Hotspots-975x650.jpg",
+            alt: "",
             description: "The city is the unofficial star of both Sex and the City and Gossip Girl, and the On Location Tours of each show’s hotspots will transport fans to familiar places throughout Manhattan. Sip cosmos, walk past Carrie’s famous brownstone, and enjoy retail therapy in Greenwich Village boutiques. Fans of Blair and Chuck can tour iconic Gossip Girl sites on the Upper East Side like the Met Steps, Dylan’s Candy Bar, the Empire Hotel, and of course, Central Park."
         }
     ]
@@ -266,15 +286,8 @@ end
                 start_lat: ((rand (start_box[:lat1]..start_box[:lat2]))*0.000001*start_box[:lat_modifier]),
                 start_lon: ((rand (end_box[:lon1]..end_box[:lon2]))*0.000001*start_box[:lon_modifier]),
                 end_lat: ((rand (start_box[:lat1]..start_box[:lat2]))*0.000001*end_box[:lat_modifier]),
-                end_lon: ((rand (end_box[:lon1]..end_box[:lon2]))*0.000001*end_box[:lon_modifier])
-                # lat: (
-                #     (rand (start_box[:lat1]..start_box[:lat2]))*0.000001*start_box[:lat_modifier]),
-                #     (rand (end_box[:lon1]..end_box[:lon2]))*0.000001*start_box[:lon_modifier])
-                # )
-                # lon: (
-                #     (rand (start_box[:lat1]..start_box[:lat2]))*0.000001*end_box[:lat_modifier]),
-                #     (rand (end_box[:lon1]..end_box[:lon2]))*0.000001*end_box[:lon_modifier])
-                # )
+                end_lon: ((rand (end_box[:lon1]..end_box[:lon2]))*0.000001*end_box[:lon_modifier]),
+                # alt: template_experience[:alt]
             })
         end
     end
