@@ -25,9 +25,6 @@ export default class MenuBar extends Component {
   }
   renderSignUp = () => <SignUp />
 
-
-  
-
   render() {
     const { activeItem } = this.state
 
@@ -62,7 +59,7 @@ export default class MenuBar extends Component {
           
           {/* {this.state.showSignUp ? */}
             <Router>
-              <Route path="/signup" exact render={this.renderSignUp} />
+              {/* <Route path="/signup" exact render={this.renderSignUp} /> */}
               <Route path="/checkout" exact render={() => <></>} />
             </Router> 
           {/* } */}
