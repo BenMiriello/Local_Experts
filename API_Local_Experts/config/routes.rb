@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :trips, only: [:show, :create, :update, :destroy]
       # resources :carts, only: [:show, :update]
       get 'carts/:id', to: 'carts#show'
+      patch 'carts/:id', to: 'carts#update'
     end
   end
 
