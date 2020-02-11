@@ -12,6 +12,7 @@ import {
   Sidebar,
 } from 'semantic-ui-react'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import {Switch} from 'react-router'
 import ExperienceContainer from '../containers/ExperienceContainer'
 
 
@@ -84,8 +85,8 @@ VerticalSidebar.propTypes = {
 
 export default class SidebarExampleTransitions extends Component {
   state = {
-    animation: 'overlay',
-    direction: 'left',
+    animation: 'push',
+    direction: 'top',
     dimmed: false,
     visible: false,
   }
@@ -104,67 +105,9 @@ export default class SidebarExampleTransitions extends Component {
 
     return (
       <div>
-        <Checkbox
-          checked={dimmed}
-          label='Dim Page'
-          onChange={this.handleDimmedChange}
-          toggle
-        />
 
-        <Header as='h5'>Direction</Header>
-        <Button.Group>
-          <Button
-            active={direction === 'left'}
-            onClick={this.handleDirectionChange('left')}
-          >
-            Left
-          </Button>
-          <Button
-            active={direction === 'right'}
-            onClick={this.handleDirectionChange('right')}
-          >
-            Right
-          </Button>
-          <Button
-            active={direction === 'top'}
-            onClick={this.handleDirectionChange('top')}
-          >
-            Top
-          </Button>
-          <Button
-            active={direction === 'bottom'}
-            onClick={this.handleDirectionChange('bottom')}
-          >
-            Bottom
-          </Button>
-        </Button.Group>
+        <Button onClick={this.handleAnimationChange('push')}>Filter</Button>
 
-        <Header as='h5'>All Direction Animations</Header>
-        <Button onClick={this.handleAnimationChange('overlay')}>Overlay</Button>
-        <Button onClick={this.handleAnimationChange('push')}>Push</Button>
-        <Button onClick={this.handleAnimationChange('scale down')}>
-          Scale Down
-        </Button>
-
-        <Header as='h5'>Vertical-Only Animations</Header>
-        <Button
-          disabled={vertical}
-          onClick={this.handleAnimationChange('uncover')}
-        >
-          Uncover
-        </Button>
-        <Button
-          disabled={vertical}
-          onClick={this.handleAnimationChange('slide along')}
-        >
-          Slide Along
-        </Button>
-        <Button
-          disabled={vertical}
-          onClick={this.handleAnimationChange('slide out')}
-        >
-          Slide Out
-        </Button>
 
         <Sidebar.Pushable as={Segment}>
           {vertical ? (
@@ -184,11 +127,6 @@ export default class SidebarExampleTransitions extends Component {
 
           <Sidebar.Pusher dimmed={dimmed && visible}>
             <Segment basic>
-            <Router> 
-          <Route path="/" exact render={() => <ExperienceContainer allExperiences={this.props.allExperiences} /> } />
-          {/* <Route path="/checkout" exact render={() => <Checkout />} /> */}
-          {/* <Route path="/signup" exact render={() => <Signup />} /> */}
-        </Router>
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
@@ -196,3 +134,4 @@ export default class SidebarExampleTransitions extends Component {
     )
   }
 }
+

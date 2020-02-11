@@ -5,11 +5,10 @@ class Api::V1::UsersController < ApplicationController
         render json: @user
     end
 
-    # def cart
-    #     byebug
-    #     @cart = User.find(params[:id]).cart
-    #     render json: @cart
-    # end
+    def index
+        @users = User.all
+        render json: @users
+    end
 
 end
 
