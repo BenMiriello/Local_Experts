@@ -16,11 +16,13 @@ class SignUp extends Component {
         const newUser = this.state
         axios.post('http://localhost:4001/api/v1/users', newUser)
         .then(res => {
+            console.log(res.data.name);
             const userCurrent = res.data
-            localStorage.setItem('User', userCurrent.username)
+            localStorage.setItem('User', userCurrent.id)
+            // redirect to show user page
         })
     }
-    
+
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
