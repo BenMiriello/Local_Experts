@@ -33,3 +33,25 @@
   padding: 8px 0;
 }
 
+/* .event-modal {
+  width: 80%;
+  height: 80%
+} */
+
+.event-modal-header {
+  text-align: center
+}
+
+.event-list {
+  max-height: 200px;
+  overflow-x: scroll;
+}
+
+.event-modal-description {
+  /* width: 100%; */
+  flex-grow: 1;
+}
+
+.event-li-item {
+  margin: 5px
+}
