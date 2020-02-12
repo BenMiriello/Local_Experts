@@ -32,7 +32,7 @@ class ExperienceCards extends Component {
     <Modal trigger={<Button color='orange'>View Dates</Button>}>
       <Modal.Header>Select a Photo</Modal.Header>
       <Modal.Content image>
-        <Image wrapped size='medium' src={this.props.image} />
+        <Image wrapped size='medium' src={this.props.experience.image} />
         <Modal.Description>
           <Header>Default Profile Image</Header>
           <p>
