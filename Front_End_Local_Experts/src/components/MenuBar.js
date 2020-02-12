@@ -71,14 +71,9 @@ export default class MenuBar extends Component {
     // })
   }
   logOutHandler = () => {
-    localStorage.clear()
-    // this.backToHome()
+    localStorage.clear();
+    window.location.reload(true)
   }
-  
-  backToHome = () => {
-    
-  }
-  
 
   noUserMenu = () => {
     const { activeItemHome, activeItemLE, open, dimmer, username, password } = this.state
@@ -185,7 +180,7 @@ export default class MenuBar extends Component {
               <NavLink to="/experiences" >Experiences</NavLink>
             </Menu.Item>
             <Menu.Item>
-              <a href="/checkout">Check Out</a>
+              <NavLink to="/checkout">Cart</NavLink>
             </Menu.Item>
             { 
               localStorage.user ?

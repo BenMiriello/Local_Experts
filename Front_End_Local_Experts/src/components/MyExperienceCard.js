@@ -7,8 +7,10 @@ const monthNames = [
 ]
 
 const MyExperienceCard = ({evt_exp}) => (
-  <Card>
-    <Header >You're Going to New York in {monthNames[(new Date(evt_exp.event.start_at)).getMonth()]}!</Header>
+  <Card  style={{"width": "75%"}}>
+    <br/>
+    <Header as="h1">You're Going to New York in {monthNames[(new Date(evt_exp.event.start_at)).getMonth()]}!</Header>
+    <br/>
     <Image src={evt_exp.experience.image} wrapped ui={false} />
     <Card.Content>
       <Card.Header>{evt_exp.experience.name}</Card.Header>

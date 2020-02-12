@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Card } from 'semantic-ui-react'
+import { Card, Label } from 'semantic-ui-react'
 import ExperienceModal from './UserPageExperienceModal'
 
 
@@ -13,6 +13,7 @@ class ExperienceCards extends Component {
         className="experience-card"
         // onClick={handleCardClick}
         image={image}
+        label={{ as: 'a', corner: 'right', icon: 'star' }}
         header={name}
         meta={category}
         description={description.substring(0,70) + "..."}

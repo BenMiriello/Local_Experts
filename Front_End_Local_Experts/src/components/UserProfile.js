@@ -37,7 +37,7 @@ export class UserProfile extends Component {
         if (this.state.userLogged.favorite_experiences) {
             return(
                 this.state.userLogged.favorite_experiences.map(experience => 
-                    <Card
+                    <Card 
                         className="experience-card"
                         image={experience.image}
                         header={experience.name}
@@ -58,7 +58,7 @@ export class UserProfile extends Component {
             return(
                 this.state.userLogged.my_experiences.map(evt_exp => 
 
-                    <MyExperienceCard  evt_exp={evt_exp}/>
+                    <MyExperienceCard evt_exp={evt_exp}/>
 
                     // <Card
                     //     className="experience-card"
@@ -77,24 +77,27 @@ export class UserProfile extends Component {
 
     render() {
         return (
-            <Segment>
-                <Grid columns={2} relaxed='very'>
-                    <Grid.Column>
-                        <Header>My Favorites</Header>
-                        <div className="cards-container">
-                            {this.showFavorites()}
-                        </div>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Header>My Experiences</Header>
-                        <div className="cards-container">
-                            {this.myExperiences()}
-                        </div>
-                    </Grid.Column>
-                </Grid>
-        
-                <Divider vertical></Divider>
-            </Segment>
+            <>
+                <Header as='h1'>Welcome, {this.state.userLogged.name}</Header>
+                <Segment>
+                    <Grid columns={2} relaxed='very'>
+                        <Grid.Column>
+                            <Header>My Favorites</Header>
+                            <div className="cards-container">
+                                {this.showFavorites()}
+                            </div>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header>My Experiences</Header>
+                            <div className="cards-container">
+                                {this.myExperiences()}
+                            </div>
+                        </Grid.Column>
+                    </Grid>
+            
+                    <Divider vertical></Divider>
+                </Segment>
+            </>
         )
     }
 }
