@@ -3,7 +3,7 @@ import './App.css';
 import HeaderContainer from './containers/HeaderContainer'
 import SubMenu from './components/SubMenu'
 import ExperienceContainer from './containers/ExperienceContainer'
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import SignUp from './components/SignUp'
 import ls from 'local-storage'
 import UserProfile from './components/UserProfile'

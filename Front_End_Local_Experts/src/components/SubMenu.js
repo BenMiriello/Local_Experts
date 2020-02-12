@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
   Button,
-  Checkbox,
+  // Checkbox,
   Grid,
   Header,
   Icon,
@@ -11,9 +11,9 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import {Switch} from 'react-router'
-import ExperienceContainer from '../containers/ExperienceContainer'
+// import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+// import {Switch} from 'react-router'
+// import ExperienceContainer from '../containers/ExperienceContainer'
 
 
 

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :experiences, only: [:show, :index]
       resources :events, only: [:show]
       resources :favorites, only: [:show, :create, :update, :destroy]
-      resources :saves, only: [:show, :create, :update, :destroy]
+      resources :saves, only: [:index, :show, :create, :update, :destroy]
       resources :trips, only: [:show, :create, :update, :destroy]
       # resources :carts, only: [:show, :update]
       get 'carts/:id', to: 'carts#show'

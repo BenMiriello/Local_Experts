@@ -3,9 +3,7 @@ import { Menu } from 'semantic-ui-react'
 import SignUp from './SignUp'
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link,
   NavLink
 } from "react-router-dom";
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
@@ -134,10 +132,10 @@ export default class MenuBar extends Component {
   renderSignUp = () => <SignUp />
 
   handleClick = (e) => {
-    console.log(e.target.innerText);
+    // console.log(e.target.innerText);
     this.setState({
       activeItem: e.target.innerText
-    }, () => {console.log('state activeitem set to: ', this.state.activeItem)})
+    })
   }
 
 
