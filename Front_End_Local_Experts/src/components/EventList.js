@@ -28,10 +28,11 @@ class EventList extends React.Component {
         console.log(evt)
         return(
             <List.Item onClick={this.handleLiClick}>
+                
                 <div className="event-li-item">
                     <List.Icon name='calendar plus' size='large' verticalAlign='middle' />
                     <List.Header as='a'>
-                        <BookOptionModal color="gray" start_at={evt.start_at.slice(0,10)}/>
+                        <BookOptionModal color="gray" event={evt} start_at={evt.start_at.slice(0,10)}/>
                     </List.Header>
                 </div>
             </List.Item>

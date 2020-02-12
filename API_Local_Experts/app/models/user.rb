@@ -7,7 +7,7 @@ class User < ApplicationRecord
     # has_many :saves, dependent: :destroy
     # has_many :saved_experiences, through: :saves, source: :experience
 
-    has_many :trips, dependent: :destroy
+    # has_many :trips, dependent: :destroy
 
     def saves
         Save.where(user_id: self.id)

@@ -4,7 +4,7 @@ class Save < ApplicationRecord
   
   belongs_to :user
 
-  belongs_to :trip
+  # belongs_to :trip
 
   def book
     # byebug

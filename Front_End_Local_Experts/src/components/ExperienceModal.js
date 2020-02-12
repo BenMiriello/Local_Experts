@@ -14,7 +14,7 @@ class ExperienceModal extends React.Component{
                 <Modal.Description class="event-modal-description">
                     <h4>Led by: {this.props.experience.host_name}</h4>
                     <p>Location: {this.props.experience.location_name}</p>
-                    <p>From: {this.props.experience.events[0].start_at.slice(11, 16)} To: {this.props.experience.events[0].end_at.slice(11, 16)}</p>
+    f                <p>From: {this.props.experience.events[0].start_at.slice(11, 16)} To: {this.props.experience.events[0].end_at.slice(11, 16)}</p>
                     <h4>Available on These Dates:</h4>
                     <EventList events={this.props.experience.events}/>
                 </Modal.Description>

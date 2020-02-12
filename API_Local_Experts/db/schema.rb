@@ -71,19 +71,10 @@ ActiveRecord::Schema.define(version: 2020_02_08_163405) do
     t.integer "number_of_guests"
     t.bigint "event_id", null: false
     t.bigint "user_id", null: false
-    t.integer "trip_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_saves_on_event_id"
     t.index ["user_id"], name: "index_saves_on_user_id"
-  end
-
-  create_table "trips", force: :cascade do |t|
-    t.string "name"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -100,5 +91,4 @@ ActiveRecord::Schema.define(version: 2020_02_08_163405) do
   add_foreign_key "favorites", "users"
   add_foreign_key "saves", "events"
   add_foreign_key "saves", "users"
-  add_foreign_key "trips", "users"
 end

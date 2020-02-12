@@ -54,6 +54,75 @@ export default class MenuBar extends Component {
     // })
   }
 
+  noUserMenu = () => {
+    const { activeItemHome, activeItemLE, open, dimmer, username, password } = this.state
+    return(
+      <>
+        <Menu.Item>
+          {/* onClick={this.renderSignUp}> */}
+          <a href="/signup" >Sign Up</a>
+        </Menu.Item>
+        <Menu.Item>
+        <Button onClick={this.show('blurring')}>LogIn</Button>
+          <Modal dimmer={dimmer} open={open} onClose={this.close}>
+              <Modal.Header>Please Log In Here</Modal.Header>
+              <Modal.Content image>
+                <Image
+                  wrapped
+                  size='medium'
+                  
+                />
+                <Modal.Description>
+                  <Header>Enter Log-In</Header>
+                  <form onSubmit= {this.logInHandler}>
+                      <ul>
+                          <li>
+                              <label htmlFor="username"> Username:</label>
+                              <input type="text"
+                                    name="username"
+                                    placeholder="Type username here"
+                                    value={username}
+                                    onChange= {this.onChangeHandler} 
+                                      />
+                          </li>
+                          
+                          <li>
+                              <label htmlFor="password"> Password:</label>
+                              <input type="text"
+                                    name="password" 
+                                    placeholder="Type password here"
+                                    value={password}
+                                    onChange= {this.onChangeHandler} 
+                                      />
+                          </li>
+                          <li>
+                              <button type="submit"> Submit </button>
+                          </li>
+                      </ul>
+                  </form>
+                  
+                </Modal.Description>
+              </Modal.Content>
+            </Modal>
+        </Menu.Item>
+      </>
+    )
+  }
+
+  activeUserMenu = () => {
+    return(
+      <>
+        <Menu.Item>
+          {/* onClick={this.renderSignUp}> */}
+          <a href="/profile" >Your Profile</a>
+        </Menu.Item>
+        <Menu.Item>
+          {/* onClick={this.renderSignUp}> */}
+          <a href="/logout" >Log-Out</a>
+        </Menu.Item>
+      </>
+    )
+  }
 
 
   handleSignUp = () => {
@@ -92,68 +161,11 @@ export default class MenuBar extends Component {
             <Menu.Item>
               <a href="/checkout">Check Out</a>
             </Menu.Item>
-            {
+            { 
               localStorage.user ?
-                <>
-                  <Menu.Item>
-                    {/* onClick={this.renderSignUp}> */}
-                    <a href="/signup" >Sign Up</a>
-                  </Menu.Item>
-                  <Menu.Item>
-                  <Button onClick={this.show('blurring')}>LogIn</Button>
-                    <Modal dimmer={dimmer} open={open} onClose={this.close}>
-                        <Modal.Header>Please Log In Here</Modal.Header>
-                        <Modal.Content image>
-                          <Image
-                            wrapped
-                            size='medium'
-                            
-                          />
-                          <Modal.Description>
-                            <Header>Enter Log-In</Header>
-                            <form onSubmit= {this.logInHandler}>
-                                <ul>
-                                    <li>
-                                        <label htmlFor="username"> Username:</label>
-                                        <input type="text"
-                                              name="username"
-                                              placeholder="Type username here"
-                                              value={username}
-                                              onChange= {this.onChangeHandler} 
-                                                />
-                                    </li>
-                                    
-                                    <li>
-                                        <label htmlFor="password"> Password:</label>
-                                        <input type="text"
-                                              name="password" 
-                                              placeholder="Type password here"
-                                              value={password}
-                                              onChange= {this.onChangeHandler} 
-                                                />
-                                    </li>
-                                    <li>
-                                        <button type="submit"> Submit </button>
-                                    </li>
-                                </ul>
-                            </form>
-                            
-                          </Modal.Description>
-                        </Modal.Content>
-                      </Modal>
-                  </Menu.Item>
-                </>
+                this.activeUserMenu()
               :
-                <>
-                  <Menu.Item>
-                    {/* onClick={this.renderSignUp}> */}
-                    <a href="/profile" >Your Profile</a>
-                  </Menu.Item>
-                  <Menu.Item>
-                    {/* onClick={this.renderSignUp}> */}
-                    <a href="/logout" >Log-Out</a>
-                  </Menu.Item>
-                </>
+                this.noUserMenu()
             }
           </Menu>
           

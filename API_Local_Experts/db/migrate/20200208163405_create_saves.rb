@@ -5,7 +5,7 @@ class CreateSaves < ActiveRecord::Migration[6.0]
       t.integer :number_of_guests
       t.belongs_to :event, index: true, null: false, foreign_key: true
       t.belongs_to :user, index: true, null: false, foreign_key: true
-      t.integer :trip_id
+      # t.integer :trip_id
 
       t.timestamps
     end

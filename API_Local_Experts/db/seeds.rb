@@ -13,7 +13,7 @@
     Location.destroy_all
     Favorite.destroy_all
     Save.destroy_all
-    Trip.destroy_all
+    # Trip.destroy_all
 end
 
 ##############################################################################################################
@@ -374,10 +374,12 @@ end
 1.times do
     puts "Creating saves..."
     def create_save(user, faves, event)
-        new_save = Save.new(user_id: user.id, event_id: event.id, number_of_guests: (rand 1..8))
-        new_trip = Trip.create(user_id: user.id, name: "#{event.start_at.strftime("%B")} #{event.experience.location.name} Trip")
-        new_save.trip_id = new_trip.id
-        new_save.save
+        Save.create(user_id: user.id, event_id: event.id, number_of_guests: (rand 1..8))
+        
+        # new_save = Save.new(user_id: user.id, event_id: event.id, number_of_guests: (rand 1..8))
+        # new_trip = Trip.create(user_id: user.id, name: "#{event.start_at.strftime("%B")} #{event.experience.location.name} Trip")
+        # new_save.trip_id = new_trip.id
+        # new_save.save
     end
 
     User.all.each do |user|
