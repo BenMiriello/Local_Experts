@@ -38,10 +38,11 @@ export default class App extends Component {
 
     return (
       <div className="App">
+        <Router> 
         <HeaderContainer />
         <SubMenu allExperiences={this.state.allExperiences} />
-        <Router> 
-          <Route path="/" exact render={() => <ExperienceContainer allExperiences={this.state.allExperiences} /> } />
+          <Route path="/" exact render={() => <></>} /> 
+          {/* <ExperienceContainer allExperiences={this.state.allExperiences} /> } /> */}
           {/* <Route path="/checkout" exact render={() => <Checkout />} /> */}
           <Route path="/signup" exact render={() => <SignUp />} />
           <Route path='/experiences' exact render={() => <ExperienceContainer allExperiences={this.state.allExperiences} />}/>

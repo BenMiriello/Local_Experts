@@ -15,10 +15,46 @@ export default class MenuBar extends Component {
   state = {
     showSignUp: false,
     open: false,
-    // activeItem: 'Local Experts'
+    activeItemLE: 'Local Experts',
+    activeItemHome: 'home',
+    // openModal: false,
+    username: "",
+    password: "",
+    isLogInActive: false
   }
 
-  // handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
+
+
+  show = (dimmer) => () => this.setState({ dimmer, open: true })
+  close = () => this.setState({ open: false })
+
+  handleOrderClick = (e, { name }) => this.setState({ activeItem: name })
+
+
+  onChangeHandler = (event) => {
+      this.setState({
+          [event.target.name]: event.target.value
+      })
+  }
+
+  logInHandler = (event) => {
+    event.preventDefault()
+    console.log(this.state)
+    // axios.get('http://localhost:4001/api/v1/users')
+      // .then(res => {
+//        const loggedUser = res.data 
+      // })
+
+    // fetch(`http://localhost:3000/users`)
+    //   .then(res => res.json())
+    //   .then(allUsers => {
+    //     // console.log(allUsers)
+    //   this.setState =  allUsers.find(function(user) {return user.username && user.password == this.state.username && this.state.password} )
+    // })
+  }
+
+
 
   handleSignUp = () => {
     
@@ -32,37 +68,28 @@ export default class MenuBar extends Component {
     console.log(e.target.innerText);
     this.setState({
       activeItem: e.target.innerText
-    })
+    }, () => {console.log('state activeitem set to: ', this.state.activeItem)})
   }
 
-  componentDidUpdate(){
-
-  }
 
   render() {
-    const { activeItem } = this.state
+    const { activeItemHome, activeItemLE, open, dimmer, username, password } = this.state
 
     return (
-      <Router>
+
         <div>
           <Menu>
             <Menu.Item header
-              // name="Local Experts"
-              // active={activeItem === 'Local Experts'}
-              // onClick={this.handleClick}
+              onClick={this.handleClick}
               >
-              {/* <Link to="/">Local Experts</Link> */}
-              <a href="/">Local Experts</a>
+              <NavLink to="/">Local Experts</NavLink>
             </Menu.Item>
-            <Menu.Item header>
-              {/* <Link to="/exp" >Experiences</Link> */}
-              <a href="/experiences" >Experiences</a>
-            </Menu.Item>
-            <Menu.Item
-              // name='Log-in'
-              // active={activeItem === 'Log-in'}
-              // onClick={this.handleItemClick}
+            <Menu.Item header
+              onClick={this.handleClick}
             >
+              <NavLink to="/experiences" >Experiences</NavLink>
+            </Menu.Item>
+            <Menu.Item>
               <a href="/checkout">Check Out</a>
             </Menu.Item>
             {
@@ -73,8 +100,47 @@ export default class MenuBar extends Component {
                     <a href="/signup" >Sign Up</a>
                   </Menu.Item>
                   <Menu.Item>
-                    {/* onClick={this.renderSignUp}> */}
-                    <a href="/login" >Log-In</a>
+                  <Button onClick={this.show('blurring')}>LogIn</Button>
+                    <Modal dimmer={dimmer} open={open} onClose={this.close}>
+                        <Modal.Header>Please Log In Here</Modal.Header>
+                        <Modal.Content image>
+                          <Image
+                            wrapped
+                            size='medium'
+                            
+                          />
+                          <Modal.Description>
+                            <Header>Enter Log-In</Header>
+                            <form onSubmit= {this.logInHandler}>
+                                <ul>
+                                    <li>
+                                        <label htmlFor="username"> Username:</label>
+                                        <input type="text"
+                                              name="username"
+                                              placeholder="Type username here"
+                                              value={username}
+                                              onChange= {this.onChangeHandler} 
+                                                />
+                                    </li>
+                                    
+                                    <li>
+                                        <label htmlFor="password"> Password:</label>
+                                        <input type="text"
+                                              name="password" 
+                                              placeholder="Type password here"
+                                              value={password}
+                                              onChange= {this.onChangeHandler} 
+                                                />
+                                    </li>
+                                    <li>
+                                        <button type="submit"> Submit </button>
+                                    </li>
+                                </ul>
+                            </form>
+                            
+                          </Modal.Description>
+                        </Modal.Content>
+                      </Modal>
                   </Menu.Item>
                 </>
               :
@@ -92,13 +158,13 @@ export default class MenuBar extends Component {
           </Menu>
           
           {/* {this.state.showSignUp ? */}
-            <Router>
+            {/* <Router> */}
               {/* <Route path="/signup" exact render={this.renderSignUp} /> */}
               <Route path="/checkout" exact render={() => <></>} />
-            </Router> 
-          {/* } */}
+
+
         </div>
-      </Router>
+
     )
   }
 }
@@ -157,3 +223,4 @@ export default class MenuBar extends Component {
 // }
 
 // export default ModalExampleDimmer
+

@@ -1,11 +1,28 @@
 import React from 'react'
 import {List, Button} from 'semantic-ui-react'
+import BookOptionModal from './BookOptionModal'
 
 class EventList extends React.Component {
 
-    handleLiClick = () => {
-        console.log('u clicked the li item')
-    }
+    // state = {
+    //     showBookOptionModal: false
+    // }
+
+    // handleLiClick = () => {
+    //     console.log('u clicked the li item ', this.state)
+    // }
+
+    // closeBookOptionModal = () => {
+    //     this.setState({
+    //         showBookOptionModal: false
+    //     })
+    // }
+
+    // changeShowBookOptionModal = () => {
+    //     this.setState(prevState => ({
+    //         showBookOptionModal: !prevState.showBookOptionModal
+    //     }))
+    // }
     
     renderLiItem = (evt) => {
         console.log(evt)
@@ -13,7 +30,9 @@ class EventList extends React.Component {
             <List.Item onClick={this.handleLiClick}>
                 <div className="event-li-item">
                     <List.Icon name='calendar plus' size='large' verticalAlign='middle' />
-                    <List.Header as='a'><Button color="gray">{evt.start_at.slice(0,10)}</Button></List.Header>
+                    <List.Header as='a'>
+                        <BookOptionModal color="gray" start_at={evt.start_at.slice(0,10)}/>
+                    </List.Header>
                 </div>
             </List.Item>
         )
