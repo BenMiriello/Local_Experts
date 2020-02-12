@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       # resources :carts, only: [:show, :update]
       get 'carts/:id', to: 'carts#show'
       patch 'carts/:id', to: 'carts#update'
+      post 'users/login', to: 'users#login'
     end
   end
 

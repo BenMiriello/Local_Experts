@@ -7,6 +7,7 @@ import {
   NavLink
 } from "react-router-dom";
 import { Button, Header, Image, Modal } from 'semantic-ui-react'
+import axios from 'axios'
 
 export default class MenuBar extends Component {
 
@@ -35,13 +36,31 @@ export default class MenuBar extends Component {
           [event.target.name]: event.target.value
       })
   }
+//  get
+//
+//
+//
+//
+//
 
   logInHandler = (event) => {
     event.preventDefault()
     console.log(this.state)
-    // axios.get('http://localhost:4001/api/v1/users')
+    const loginInfo = {
+      name: this.state.username,
+      password: this.state.password
+    }
+    axios.post('http://localhost:4001/api/v1/users/login',loginInfo)
+    .then(console.log)
       // .then(res => {
-//        const loggedUser = res.data 
+      //  const allUsers = res.data
+      //  const {username, password} = this.state
+      //  const loggedUser = allUsers.find(users => users.name === username)
+      //  if loggedUser && logged
+       
+
+
+
       // })
 
     // fetch(`http://localhost:3000/users`)
@@ -51,6 +70,15 @@ export default class MenuBar extends Component {
     //   this.setState =  allUsers.find(function(user) {return user.username && user.password == this.state.username && this.state.password} )
     // })
   }
+  logOutHandler = () => {
+    localStorage.clear()
+    // this.backToHome()
+  }
+  
+  backToHome = () => {
+    
+  }
+  
 
   noUserMenu = () => {
     const { activeItemHome, activeItemLE, open, dimmer, username, password } = this.state
@@ -86,7 +114,7 @@ export default class MenuBar extends Component {
                           
                           <li>
                               <label htmlFor="password"> Password:</label>
-                              <input type="text"
+                              <input type="password"
                                     name="password" 
                                     placeholder="Type password here"
                                     value={password}
@@ -112,11 +140,11 @@ export default class MenuBar extends Component {
       <>
         <Menu.Item>
           {/* onClick={this.renderSignUp}> */}
-          <a href="/profile" >Your Profile</a>
+          <NavLink to="/profile" >Your Profile</NavLink>
         </Menu.Item>
-        <Menu.Item>
+        <Menu.Item onClick={this.logOutHandler} >
           {/* onClick={this.renderSignUp}> */}
-          <a href="/logout" >Log-Out</a>
+          <div>Log-Out</div>
         </Menu.Item>
       </>
     )

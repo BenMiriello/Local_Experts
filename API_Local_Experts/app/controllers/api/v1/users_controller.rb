@@ -17,5 +17,13 @@ class Api::V1::UsersController < ApplicationController
         render json: @user
     end
 
+    def login
+        @user = User.find(params[:name])
+        if @user && @user.authenticate(params[:password])
+            render json: @user
+        else
+            render json: {error: "Invalid Username or Password"}
+        end
+    end
 end
 

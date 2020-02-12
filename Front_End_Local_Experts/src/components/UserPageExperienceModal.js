@@ -3,7 +3,7 @@ import {Modal, Button, Image} from 'semantic-ui-react'
 import EventList from './EventList'
 import MapInsert from './MapInsert'
 
-class FavoritesExperienceModal extends React.Component{
+class UserPageExperienceModal extends React.Component{
 
     state={
         events: []
@@ -20,7 +20,7 @@ class FavoritesExperienceModal extends React.Component{
     }
 
     render(){
-        console.log('experience modal props', this.props)
+        // console.log('experience modal props', this.props)
         if (this.state.events.length >= 1) {
             return(
                 <Modal style={{ height: '60%', width: '80%' }} trigger={<Button color='orange'>View Dates</Button>}>
@@ -32,7 +32,7 @@ class FavoritesExperienceModal extends React.Component{
                         <p>Location: {this.props.experience.location_name}</p>
                         <p>From: {this.state.events[0].start_at.slice(11, 16)} To: {this.state.events[0].end_at.slice(11, 16)}</p>
                         <h4>Available on These Dates:</h4>
-                        <EventList events={this.props.experience.events}/>
+                        <EventList events={this.state.events}/>
                     </Modal.Description>
                     <MapInsert experience={this.props.experience}/>
                     </Modal.Content>
@@ -46,5 +46,5 @@ class FavoritesExperienceModal extends React.Component{
     }
 }
 
-export default FavoritesExperienceModal
+export default UserPageExperienceModal
 

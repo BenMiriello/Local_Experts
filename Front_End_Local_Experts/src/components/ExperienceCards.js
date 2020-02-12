@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Card } from 'semantic-ui-react'
-import ExperienceModal from './FavoritesExperienceModal'
+import ExperienceModal from './UserPageExperienceModal'
 
 
 class ExperienceCards extends Component {

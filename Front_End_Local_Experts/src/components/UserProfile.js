@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {Card, Grid, Segment, Divider, Header} from 'semantic-ui-react'
-import FavoritesExperienceModal from './FavoritesExperienceModal'
+import UserPageExperienceModal from './UserPageExperienceModal'
+// import {Modal, Button, Image} from 'semantic-ui-react'
+// import EventList from './EventList'
+// import MapInsert from './MapInsert'
+import MyExperienceCard from './MyExperienceCard'
+// import MyExperienceModal from './MyExperienceModal'
 
 export class UserProfile extends Component {
 
@@ -38,12 +43,35 @@ export class UserProfile extends Component {
                         header={experience.name}
                         meta={experience.category}
                         description={experience.description.substring(0,70) + "..."}
-                        extra={<FavoritesExperienceModal experience={experience} />}
+                        extra={<UserPageExperienceModal experience={experience} />}
                     />
                 )
             )
         } else {
             return "Either you aren't logged in or you haven't favorited any experiences yet..."
+        }
+    }
+
+    myExperiences = () => {
+        console.log('user booked exps ', this.state.userLogged.my_experiences)
+        if (this.state.userLogged.my_experiences) {
+            return(
+                this.state.userLogged.my_experiences.map(evt_exp => 
+
+                    <MyExperienceCard  evt_exp={evt_exp}/>
+
+                    // <Card
+                    //     className="experience-card"
+                    //     image={evt_exp.experience.image}
+                    //     header={evt_exp.experience.name}
+                    //     meta={evt_exp.experience.category}
+                    //     description={evt_exp.experience.description.substring(0,70) + "..."}
+                    //     extra={<UserPageExperienceModal experience={evt_exp.experience} />}
+                    // />
+                ) 
+            )
+        } else {
+            return "Are You Experienced?"
         }
     }
 
@@ -53,11 +81,15 @@ export class UserProfile extends Component {
                 <Grid columns={2} relaxed='very'>
                     <Grid.Column>
                         <Header>My Favorites</Header>
-                        {this.showFavorites()}
+                        <div className="cards-container">
+                            {this.showFavorites()}
+                        </div>
                     </Grid.Column>
                     <Grid.Column>
                         <Header>My Experiences</Header>
-                        {/* {this.showExperiences} */}
+                        <div className="cards-container">
+                            {this.myExperiences()}
+                        </div>
                     </Grid.Column>
                 </Grid>
         
