@@ -8,6 +8,7 @@ import SignUp from './components/SignUp'
 import ls from 'local-storage'
 import UserProfile from './components/UserProfile'
 import LandingPage from './components/LandingPage'
+import Separator from './styleComponents/Separator'
 
 
 export default class App extends Component {
@@ -40,8 +41,9 @@ export default class App extends Component {
     return (
       <div className="App">
         <Router> 
-        <HeaderContainer />
-        <SubMenu allExperiences={this.state.allExperiences} />
+          <HeaderContainer />
+          {/* <SubMenu allExperiences={this.state.allExperiences} /> */}
+          <Separator px={30}/>
           <Route path="/" exact render={() => <LandingPage/>} /> 
           {/* <ExperienceContainer allExperiences={this.state.allExperiences} /> } /> */}
           {/* <Route path="/checkout" exact render={() => <Checkout />} /> */}
